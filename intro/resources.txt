@@ -1,0 +1,9 @@
+https://github.com/golang/go/wiki/CodeReviewComments#doc-comments
+
+https://golang.org/doc/effective_go.html#errors
+
+https://tour.golang.org/welcome/1
+
+https://golang.org/doc/
+
+https://golang.org/ref/spec
