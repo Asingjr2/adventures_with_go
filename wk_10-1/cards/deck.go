@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // declaring new data type
@@ -23,7 +24,7 @@ func (d deck) print() {
 func newDeck() deck {
 	// function that creates and returns a new deck
 	cards := deck{} // creating empty deck before appending
-	suits := []string{"Spade", "Diamonds", "Hearts", "Clubs"}
+	suits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
 	values := []string{"Ace", "Two", "Three", "Four"}
 
 	// Creating two for loops to create deck
@@ -66,8 +67,14 @@ func newDeckFromFile(filename string) deck {
 
 func (d deck) shuffle() {
 	// swaps index with random num between 0 and len(deck)
+	// Creating new seed using built in method that takes int64.  We use current time in seconds
+
+	source := rand.NewSource(time.Now().UnixNano())
+	r := rand.New(source)
+
 	for i := range d {
-		newPos := rand.Intn(len(d) - 1)
+		// newPos := rand.Intn(len(d) - 1)
+		newPos := r.Intn(len(d) - 1) // function wtih custom r with new seed/source
 
 		// format does not exist in python...need temp value to swap
 		d[i], d[newPos] = d[newPos], d[i]
