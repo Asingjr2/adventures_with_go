@@ -34,4 +34,5 @@ func printMap(m map[string]string) {
 		fmt.Println("Color is %v", color)
 		fmt.Println("Hex is %v", hex)
 	}
+
 }

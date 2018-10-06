@@ -40,14 +40,20 @@ func main() {
 	jim := adult{name: "Jim", contactInfo: contactInfo{zipcode: 22041}}
 	fmt.Printf("%+v", jim)
 
+	// working with pointers and new syntax
 	jimPointer := &jim
 	fmt.Println(jimPointer)
 	jimPointer.updateName("JOEY")
 	jimPointer.print()
 
-	fmt.Println("new stuff")
-	jimPointer / updt("ZACH")
-	fmt.Printf(jimPointer)
+	// creating a slice of structs
+	stuff := []struct {
+		x, y int
+	}{
+		{5, 80},
+		{799, 90},
+	}
+	fmt.Println(stuff)
 }
 
 func (a adult) print() {
