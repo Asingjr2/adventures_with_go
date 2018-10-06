@@ -1,6 +1,6 @@
-// exploring value versus reference type through updates to variables
+// exploring value type versus reference type through updates to variables
 // map are reference types so changes in functions alter original info
-// structs are reference types so changes in functions update copy or pointer
+// structs are value types so changes in functions update copy or pointer
 package main
 
 import (
@@ -44,7 +44,7 @@ func mapChange(m map[string]string) {
 }
 
 func structChange(s person) {
-	// will alter information in function or copy
+	// will alter information in function or copy not original
 	ss := &s
 	fmt.Println(ss)
 	s.name = "New Name STRUCT"
