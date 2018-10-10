@@ -7,6 +7,7 @@ func intSeq() func() int {
 	mem := &i
 	fmt.Println(mem)
 	return func() int {
+		// access the x defined in intSeq scope
 		i++
 		return i
 	}
