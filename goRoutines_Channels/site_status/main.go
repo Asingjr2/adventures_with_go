@@ -22,6 +22,7 @@ func main() {
 		go checkLink(link, c)
 	}
 
+	// **** do not share variables in channels...must pass as arguements
 	// calling function with returned link coming out of channel
 	// creating function literal (e.g. lambda) with a callback
 	for l := range c {
@@ -29,11 +30,6 @@ func main() {
 			time.Sleep(1*time.Second)
 			checkLink(link, c)
 		}(l)  // l is being based into function literal
-	}
-
-	// above can be written as below.  variable is whatever comes out of channel
-	for {
-		go checkLink(<-c, c)
 	}
 }
 
