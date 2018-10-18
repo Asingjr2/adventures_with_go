@@ -45,7 +45,7 @@ func main() {
 	adults := []person{}
 
 	// Can write following line two ways.  Changing string json into bytes and then unmarshaling
-	// err = json.Unmarshal(]byte(bs), &adults	)
+	// err = json.Unmarshal([]]byte(bs), &adults	)
 	err = json.Unmarshal(
 		[]byte(bs), &adults, // putting on new line requires comma
 	)
@@ -56,5 +56,5 @@ func main() {
 	fmt.Println("unmarshal worked", adults)
 	for _, v := range adults {
 		fmt.Println(v.First, v.Last, v.Age)
-	} 
+	}
 }
