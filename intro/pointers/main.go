@@ -10,6 +10,10 @@ type dog struct {
 	name string
 }
 
+type cat struct {
+	breed string
+}
+
 func main() {
 	seven := 7
 	fmt.Println(seven)
@@ -24,6 +28,7 @@ func main() {
 	fmt.Println(spike.name)
 
 	spot := dog{"Spot"} // shortcut
+	// Was able to base original value and pointer into function
 	spot.newName2("spot changed to Dot")
 	fmt.Println(spot.name)
 }
@@ -38,3 +43,4 @@ func (dogPointer *dog) newName2(name string) {
 	// * in front of type means that we are using a pointer type
 	(*dogPointer).name = name
 }
+
