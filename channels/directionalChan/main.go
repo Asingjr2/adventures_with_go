@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	// Basic Channel with buffer of 3
+	// Basic Channel with buffer of 2
 	c := make(chan int, 2)
 	c <- 100
 	c <- 200
