@@ -16,7 +16,7 @@ type animal struct {
 type letters []string
 
 type weight struct {
-	Pounds dec.Decimal `json:"lbs"`
+	Pounds dec.Decimal `json:"lbs,string"`
 }
 
 func main() {
@@ -51,7 +51,7 @@ func main() {
 	fmt.Printf("%T\n", unmarshalPack)
 
 	// *************************TESTING TAGS
-	fakeJSONWeight := `{"lbs":70.0321}`
+	fakeJSONWeight := `{"lbs":70.0321545225}`
 
 	var convertedWeight weight
 	err = json.Unmarshal([]byte(fakeJSONWeight), &convertedWeight)

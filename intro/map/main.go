@@ -4,7 +4,8 @@ package main
 import "fmt"
 
 func main() {
-	// creation of map requires static keys and values or same type
+	// creation of map requires static keys to be same and values to be same type
+	// Key and value can be different types from each otyerh
 	// commas are required after every line
 	colors := map[string]string{
 		"red":    "#ff000",

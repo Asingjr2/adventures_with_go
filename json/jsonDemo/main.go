@@ -9,12 +9,15 @@ import (
 	"net/http"
 )
 
+// ====================================
 // Creating struct with "dummy" attribute to similulate additional data being returned
 // Error checking in json only occurs against type of attribute listed
 // Other returned JSON elements are ignored if not defined in struct
+// ====================================
 type serverTime struct {
-	ServerTime int `json:"serverTime"`
-	random     string
+	ServerTime111 int `json:"serverTime"` // If method type not matching json false value returned
+	random        string
+	random2       string
 }
 
 func main() {
@@ -43,7 +46,7 @@ func main() {
 		log.Fatal("response err", err)
 	}
 
-	fmt.Println(st.ServerTime)
+	fmt.Println(st.ServerTime111)
 	fmt.Println(st.random)
 	log.Printf("%+v", st)
 
