@@ -43,7 +43,7 @@ func foo() {
 }
 
 func bar() {
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 1000; i++ {
 		fmt.Println("bar", i)
 	}
 }
