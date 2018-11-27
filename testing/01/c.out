@@ -1,0 +1,5 @@
+mode: set
+go_lang/testing/01/main.go:8.13,12.2 3 0
+go_lang/testing/01/main.go:14.27,16.22 2 1
+go_lang/testing/01/main.go:19.2,19.12 1 1
+go_lang/testing/01/main.go:16.22,18.3 1 1
